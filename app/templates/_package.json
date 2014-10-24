@@ -1,6 +1,6 @@
 {
   "name": "package",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "dependencies": {},
   "devDependencies": {
     "time-grunt": "~1.0.0",
