@@ -1,5 +1,9 @@
 {
   "name": "package",
   "version": "0.0.1",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "time-grunt": "~1.0.0",
+    "load-grunt-tasks": "~1.0.0"
+  }
 }
