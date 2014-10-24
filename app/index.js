@@ -38,6 +38,7 @@ var InkemailGenerator = yeoman.generators.Base.extend({
 
       this.src.copy('_package.json', 'package.json');
       this.src.copy('_bower.json', 'bower.json');
+      this.src.copy('_Gruntfile.js', 'Gruntfile.js');
     },
 
     projectfiles: function () {
