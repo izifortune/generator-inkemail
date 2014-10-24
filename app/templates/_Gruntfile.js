@@ -9,6 +9,25 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
 
+    watch: {
+      bower: {
+        files: ['bower.json'],
+        tasks: ['bowerInstall']
+      },
+      sass: {
+        files: ['<%= yeoman.app %>/styles/**/*.{scss,sass}'],
+        tasks: ['sass:server'] //'autoprefixer']
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.options.livereload %>'
+        },
+        files: [
+        '<%= yeoman.app %>/*.html',
+        ]
+      }
+    },
+
     connect: {
       options: {
         port: 9000,
