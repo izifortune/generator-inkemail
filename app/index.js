@@ -34,7 +34,6 @@ var InkemailGenerator = yeoman.generators.Base.extend({
   writing: {
     app: function () {
       this.dest.mkdir('app');
-      this.dest.mkdir('app/templates');
 
       this.src.copy('_package.json', 'package.json');
       this.src.copy('_bower.json', 'bower.json');
@@ -46,8 +45,8 @@ var InkemailGenerator = yeoman.generators.Base.extend({
       this.src.copy('jshintrc', '.jshintrc');
     },
 
-    styels: function() {
-      this.directory('styles');
+    styles: function() {
+      this.directory('styles', 'app/styles');
     }
   },
 

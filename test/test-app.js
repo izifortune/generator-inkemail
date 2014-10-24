@@ -28,7 +28,7 @@ describe('inkemail:app', function () {
 
   it('create styles directory with main.scss', function() {
     assert.file([
-      'styles/main.scss',
+      'app/styles/main.scss',
     ]);
   });
 
