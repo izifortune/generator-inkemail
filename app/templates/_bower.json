@@ -1,6 +1,8 @@
 {
   "name": "package",
-  "version": "0.0.0",
-  "dependencies": {}
+  "version": "0.0.1",
+  "dependencies": {
+    "ink": "~1.0.5"
+  }
 }
 

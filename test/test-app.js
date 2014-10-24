@@ -25,4 +25,8 @@ describe('inkemail:app', function () {
       '.jshintrc'
     ]);
   });
+
+  // it('install zurb ink', function() {
+  //   assert.file(['app/bower_components/ink/css/ink.css']);
+  // });
 });
