@@ -59,7 +59,19 @@ module.exports = function (grunt) {
           base: '<%= yeoman.dist %>'
         }
       }
+    },
+
+    sass: {
+      options: {
+        sourceMap: true
+      },
+      dev: {
+        files: {
+          '.tmp/main.css': '<%= yeoman.app %>/styles/main.scss'
+        }
+      }
     }
+
   });
 
   grunt.registerTask('serve', [
