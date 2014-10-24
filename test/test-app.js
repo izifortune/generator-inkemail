@@ -26,6 +26,12 @@ describe('inkemail:app', function () {
     ]);
   });
 
+  it('create styles directory with main.scss', function() {
+    assert.file([
+      'styles/main.scss',
+    ]);
+  });
+
   // it('install zurb ink', function() {
   //   assert.file(['app/bower_components/ink/css/ink.css']);
   // });
