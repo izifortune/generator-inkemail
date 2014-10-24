@@ -1,6 +1,7 @@
 'use strict';
 var util = require('util');
 var path = require('path');
+var _ = require('lodash');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 
@@ -17,15 +18,24 @@ var InkemailGenerator = yeoman.generators.Base.extend({
       'Welcome to the perfect Inkemail generator!'
     ));
 
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
+    var prompts = [
+      {
+        name: 'projectName',
+        message: 'What is the name of your project?',
+        default: 'My Email'
+      }
+    ];
+
+
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+
+      _.each(props, function(val, key) {
+        this[key] = val;
+      }, this);
+
+      this._projectName = this.projectName;
+      this.log(this.projectName);
 
       done();
     }.bind(this));
@@ -35,8 +45,8 @@ var InkemailGenerator = yeoman.generators.Base.extend({
     app: function () {
       this.dest.mkdir('app');
 
-      this.src.copy('_package.json', 'package.json');
-      this.src.copy('_bower.json', 'bower.json');
+      this.template('_package.json', 'package.json');
+      this.template('_bower.json', 'bower.json');
       this.src.copy('_Gruntfile.js', 'Gruntfile.js');
     },
 
