@@ -4,6 +4,7 @@
   "dependencies": {},
   "devDependencies": {
     "time-grunt": "~1.0.0",
-    "load-grunt-tasks": "~1.0.0"
+    "load-grunt-tasks": "~1.0.0",
+    "grunt-contrib-connect": "~0.5.0"
   }
 }
