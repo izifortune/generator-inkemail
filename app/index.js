@@ -60,12 +60,16 @@ var InkemailGenerator = yeoman.generators.Base.extend({
     },
 
     styles: function() {
-      this.directory('styles', 'app/styles');
+      this.template('styles', 'app/styles');
     },
 
     template: function () {
       this.template('email/' + this._template.filename, 'app/index.html');
     },
+
+    templateStyles: function() {
+      this.src.copy('styles/_' + this._template.name, 'app/styles/_' + this.template.name);
+    }
   },
 
   end: function () {

@@ -1,3 +1,10 @@
 /**
  * Main style file
  */
+
+<%= if (_template === 'basic')   { %>
+@import "basic";
+<% } %>
+<%= if (_template === 'sidebar')   { %>
+@import "sidebar";
+<% } %>
