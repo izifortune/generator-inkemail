@@ -60,7 +60,7 @@ var InkemailGenerator = yeoman.generators.Base.extend({
     },
 
     styles: function() {
-      this.template('styles', 'app/styles');
+      this.template('styles/main.scss', 'app/styles/main.scss');
     },
 
     template: function () {
@@ -68,7 +68,7 @@ var InkemailGenerator = yeoman.generators.Base.extend({
     },
 
     templateStyles: function() {
-      this.src.copy('styles/_' + this._template.name, 'app/styles/_' + this.template.name);
+      this.src.copy('styles/_' + this._template.name + '.scss', 'app/styles/_' + this.template.name + '.scss');
     }
   },
 
