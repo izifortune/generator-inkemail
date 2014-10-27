@@ -4,6 +4,7 @@ var path = require('path');
 var _ = require('lodash');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
+var inkUtils = require('../utils');
 
 var InkemailGenerator = yeoman.generators.Base.extend({
   initializing: function () {
@@ -23,6 +24,12 @@ var InkemailGenerator = yeoman.generators.Base.extend({
         name: 'projectName',
         message: 'What is the name of your project?',
         default: 'My Email'
+      },
+      {
+        type: 'list',
+        name: 'template',
+        message: 'Which template would you like to use?',
+        choices: _.pluck(inkUtils.starters.templates, 'name')
       }
     ];
 
