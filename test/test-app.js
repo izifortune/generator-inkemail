@@ -12,7 +12,11 @@ describe('inkemail:app', function () {
       .inDir(path.join(os.tmpdir(), './temp-test'))
       .withOptions({ 'skip-install': true })
       .withPrompt({
-        someOption: true
+        someOption: true,
+        template: {
+          name: 'basic',
+          filename: 'basic.html'
+        }
       })
       .on('end', done);
   });
