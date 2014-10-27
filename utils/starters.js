@@ -2,7 +2,7 @@ module.exports = {
   templates: [
     {
       name: 'Basic',
-      file: 'basic.html'
+      filename: 'basic.html'
     },
     {
       name: '[T] Tabs',

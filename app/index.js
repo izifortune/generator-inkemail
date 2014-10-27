@@ -38,10 +38,8 @@ var InkemailGenerator = yeoman.generators.Base.extend({
     this.prompt(prompts, function (props) {
 
       _.each(props, function(val, key) {
-        this[key] = val;
+        this['_'+key] = val;
       }, this);
-
-      this._projectName = this.projectName;
 
       done();
     }.bind(this));
@@ -66,7 +64,7 @@ var InkemailGenerator = yeoman.generators.Base.extend({
     },
 
     template: function () {
-      this.template('email/' + this.template, 'app/index.html');
+      this.template('email/' + this._template.filename, 'app/index.html');
     },
   },
 
